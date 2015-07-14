@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+# ? is require "openssl" needed if 'rails/all' used
+# ? put this require afer bunder when it is converted to gem
+require File.expand_path('../decryptor.rb', __FILE__)
+
+
 module TrashDeptestNoTables
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
